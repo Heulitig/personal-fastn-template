@@ -44,7 +44,7 @@ jobs:
       - run: |
           echo "Showing current directory contents"
           ls -al
-          ls -al ..
+          ls -al ../${{ env.REPOSITORY_NAME }}
           ls -al ../..
         shell: bash
       - run: rm .github/workflows/rename.yml
