@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     permissions: write-all
-    if: ${{ github.repository != 'heulitig/personal-fastn-template' && github.run_number > 1 }}
+    if: ${{ github.run_number > 1 }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
