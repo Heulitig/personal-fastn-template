@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     permissions: write-all
-    if: ${{ github.run_number > 1 }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

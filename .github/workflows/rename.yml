@@ -46,5 +46,4 @@ jobs:
           ls -al ../..
         shell: bash
       - run: rm .github/workflows/rename.yml
-        shell: bash
 
