@@ -41,6 +41,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ rename-project, call-deploy-workflow ]
     steps:
-      - run: rm ./.github/workflows/rename.yml
+      - run: |
+          echo "Showing current directory contents"
+          ls -al
+        shell: bash
+      - run: rm .github/workflows/rename.yml
         shell: bash
 
