@@ -36,6 +36,7 @@ jobs:
     uses: ./.github/workflows/deploy.yml
   remove-rename-workflow:
     permissions: write-all
+    runs-on: ubuntu-latest
     needs: [ call-deploy-workflow ]
     steps:
       - uses: actions/checkout@v2
