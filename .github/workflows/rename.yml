@@ -38,6 +38,7 @@ jobs:
     permissions: write-all
     needs: [ call-deploy-workflow ]
     steps:
-      name: remove-rename
-      run:
-        rm .github/workflows/rename.yml
+      - uses: actions/checkout@v2
+      - uses: FranzDiebold/github-env-vars-action@v2
+      - run: rm .github/workflows/rename.yml
+
